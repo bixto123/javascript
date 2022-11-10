@@ -1,0 +1,58 @@
+/* Définition d'une fonction print */
+function print(element, number) {
+    element.style.color = "black";
+    element.innerHTML = "User" + number;
+}
+
+/* Définition d'une class User */
+class User {
+    constructor(firstname, lastname, age) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+    }
+    print(element) {
+        element.style.color = "green";
+        element.innerHTML =
+            "FirstName: " + this.firstname + "</br>" +
+            "LastName: " + this.lastname + "</br>" +
+            "Age: " + this.age + "</br>" +
+            "Is a user";
+    }
+}
+
+/* Définition d'une class SuperUser héritiere de user */
+class SuperUser extends User {
+    constructor(firstname, lastname, age, chg, del) {
+        super(firstname, lastname, age);
+        this.chg = chg;
+        this.del = del;
+    }
+    print(element) {
+        element.style.color = "red";
+        element.innerHTML =
+            "FirstName: " + this.firstname + "</br>" +
+            "LastName: " + this.lastname + "</br>" +
+            "Age: " + this.age + "</br>" +
+            "Change: " + this.chg + "</br>" +
+            "Delete: " + this.del + "</br>" +
+            "Is a super user";
+    }
+}
+
+let user1 = new User("Fabrice", "Dame", 44);
+let user2 = new User("Tony", "Stark", 38);
+let user3 = new SuperUser("Joe", "Bar", 50, true, true);
+let heading1 = document.getElementById("heading1");
+let heading2 = document.getElementById("heading2");
+let heading3 = document.getElementById("heading3");
+let paragraph1 = document.getElementById("paragraph1");
+let paragraph2 = document.getElementById("paragraph2");
+let paragraph3 = document.getElementById("paragraph3");
+let number = 1;
+print(heading1, number++);
+user1.print(paragraph1);
+print(heading2, number++);
+user2.print(paragraph2);
+print(heading3, number);
+user3.print(paragraph3);
