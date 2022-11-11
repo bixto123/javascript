@@ -1,0 +1,9 @@
+main {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h1, p {
+    background-color: floralwhite;
+    border: solid 1px black;
+}
