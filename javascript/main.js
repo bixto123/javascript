@@ -23,10 +23,11 @@ class User {
 
 /* Définition d'une class SuperUser héritiere de user */
 class SuperUser extends User {
-    constructor(firstname, lastname, age, chg, del) {
+    constructor(firstname, lastname, age, change, remove, ban) {
         super(firstname, lastname, age);
-        this.chg = chg;
-        this.del = del;
+        this.change = change;
+        this.remove = remove;
+        this.ban = ban;
     }
     print(element) {
         element.style.color = "red";
@@ -34,15 +35,16 @@ class SuperUser extends User {
             "FirstName: " + this.firstname + "</br>" +
             "LastName: " + this.lastname + "</br>" +
             "Age: " + this.age + "</br>" +
-            "Change: " + this.chg + "</br>" +
-            "Delete: " + this.del + "</br>" +
+            "Change: " + this.change + "</br>" +
+            "Remove: " + this.remove + "</br>" +
+            "Ban: " + this.ban + "</br>" +
             "Is a super user";
     }
 }
 
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
-let user3 = new SuperUser("Joe", "Bar", 50, true, true);
+let user3 = new SuperUser("Joe", "Bar", 50, true, true, true);
 let heading1 = document.getElementById("heading1");
 let heading2 = document.getElementById("heading2");
 let heading3 = document.getElementById("heading3");
