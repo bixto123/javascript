@@ -1,6 +1,5 @@
 /* Définition d'une fonction print */
 function print(element, number) {
-    element.style.color = "black";
     element.innerHTML = "User" + number;
 }
 
