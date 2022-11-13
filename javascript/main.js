@@ -5,7 +5,7 @@ function print(element, number) {
 
 /* Définition d'une class User */
 class User {
-    /* Assignation des variables local */
+    /* Initialisation des variables local */
     constructor(firstname, lastname, age) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -24,7 +24,7 @@ class User {
 
 /* Définition d'une class SuperUser héritiere de User */
 class SuperUser extends User {
-    /* Assignation des variables local */
+    /* Initialisation des variables local */
     constructor(firstname, lastname, age, change, remove, ban) {
         super(firstname, lastname, age);
         this.change = change;
@@ -45,12 +45,14 @@ class SuperUser extends User {
     }
 }
 
+/* Instanciation des User */
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
 let user3 = new User("Chuck","Norris", 82);
 let user4 = new SuperUser("Jo", "Bar", 50, true, true, true);
 let user5 = new SuperUser("Tony", "Danza", 71, true, false, false);
 
+/* Initialisation des variables local */
 let heading1 = document.getElementById("heading1");
 let heading2 = document.getElementById("heading2");
 let heading3 = document.getElementById("heading3");
@@ -63,6 +65,7 @@ let paragraph4 = document.getElementById("paragraph4");
 let paragraph5 = document.getElementById("paragraph5");
 let number = 1;
 
+/* Affiche le contenu de chaque User */
 print(heading1, number++);
 user1.print(paragraph1);
 print(heading2, number++);
