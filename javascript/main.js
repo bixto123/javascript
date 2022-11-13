@@ -44,16 +44,23 @@ class SuperUser extends User {
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
 let user3 = new SuperUser("Joe", "Bar", 50, true, true, true);
+let user4 = new SuperUser("Tony", "Michelli", 50, true, false, false);
+
 let heading1 = document.getElementById("heading1");
 let heading2 = document.getElementById("heading2");
 let heading3 = document.getElementById("heading3");
+let heading4 = document.getElementById("heading4");
 let paragraph1 = document.getElementById("paragraph1");
 let paragraph2 = document.getElementById("paragraph2");
 let paragraph3 = document.getElementById("paragraph3");
+let paragraph4 = document.getElementById("paragraph4");
 let number = 1;
+
 print(heading1, number++);
 user1.print(paragraph1);
 print(heading2, number++);
 user2.print(paragraph2);
-print(heading3, number);
+print(heading3, number++);
 user3.print(paragraph3);
+print(heading4, number);
+user4.print(paragraph4);
