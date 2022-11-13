@@ -1,6 +1,6 @@
 /* Définition d'une fonction print */
 function print(element, number) {
-    element.innerHTML = "Utilisateur " + number;
+    element.innerHTML = "Utilisateur" + number;
 }
 
 /* Définition d'une class User */
