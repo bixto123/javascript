@@ -5,11 +5,13 @@ function print(element, number) {
 
 /* Définition d'une class User */
 class User {
+    /* Assignation des variables local */
     constructor(firstname, lastname, age) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
     }
+    /* Définition d'une fonction print */
     print(element) {
         element.style.color = "green";
         element.innerHTML =
@@ -20,14 +22,16 @@ class User {
     }
 }
 
-/* Définition d'une class SuperUser héritiere de user */
+/* Définition d'une class SuperUser héritiere de User */
 class SuperUser extends User {
+    /* Assignation des variables local */
     constructor(firstname, lastname, age, change, remove, ban) {
         super(firstname, lastname, age);
         this.change = change;
         this.remove = remove;
         this.ban = ban;
     }
+    /* Définition d'une fonction print */
     print(element) {
         element.style.color = "red";
         element.innerHTML =
@@ -43,17 +47,20 @@ class SuperUser extends User {
 
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
-let user3 = new SuperUser("Joe", "Bar", 50, true, true, true);
-let user4 = new SuperUser("Tony", "Michelli", 50, true, false, false);
+let user3 = new User("Chuck","Norris", 82);
+let user4 = new SuperUser("Jo", "Bar", 50, true, true, true);
+let user5 = new SuperUser("Tony", "Danza", 71, true, false, false);
 
 let heading1 = document.getElementById("heading1");
 let heading2 = document.getElementById("heading2");
 let heading3 = document.getElementById("heading3");
 let heading4 = document.getElementById("heading4");
+let heading5 = document.getElementById("heading5");
 let paragraph1 = document.getElementById("paragraph1");
 let paragraph2 = document.getElementById("paragraph2");
 let paragraph3 = document.getElementById("paragraph3");
 let paragraph4 = document.getElementById("paragraph4");
+let paragraph5 = document.getElementById("paragraph5");
 let number = 1;
 
 print(heading1, number++);
@@ -62,5 +69,7 @@ print(heading2, number++);
 user2.print(paragraph2);
 print(heading3, number++);
 user3.print(paragraph3);
-print(heading4, number);
+print(heading4, number++);
 user4.print(paragraph4);
+print(heading5, number);
+user5.print(paragraph5);
