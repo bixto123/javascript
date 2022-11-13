@@ -1,0 +1,1 @@
+sass --watch c:\Apache24\htdocs\javascript\scss\style.scss:c:\Apache24\htdocs\javascript\css\style.css
