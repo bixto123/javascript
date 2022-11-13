@@ -1,6 +1,6 @@
 /* Définition d'une fonction print */
 function print(element, number) {
-    element.innerHTML = "User" + number;
+    element.innerHTML = "Utilisateur " + number;
 }
 
 /* Définition d'une class User */
@@ -15,10 +15,10 @@ class User {
     print(element) {
         element.style.color = "green";
         element.innerHTML =
-            "FirstName: " + this.firstname + "</br>" +
-            "LastName: " + this.lastname + "</br>" +
+            "Prénom: " + this.firstname + "</br>" +
+            "Nom : " + this.lastname + "</br>" +
             "Age: " + this.age + "</br>" +
-            "Is a user";
+            "Est un utilisateur";
     }
 }
 
@@ -35,13 +35,13 @@ class SuperUser extends User {
     print(element) {
         element.style.color = "red";
         element.innerHTML =
-            "FirstName: " + this.firstname + "</br>" +
-            "LastName: " + this.lastname + "</br>" +
+            "Prénom: " + this.firstname + "</br>" +
+            "Nom: " + this.lastname + "</br>" +
             "Age: " + this.age + "</br>" +
-            "Change: " + this.change + "</br>" +
-            "Remove: " + this.remove + "</br>" +
-            "Ban: " + this.ban + "</br>" +
-            "Is a super user";
+            "Changement: " + this.change + "</br>" +
+            "Supression: " + this.remove + "</br>" +
+            "Banir: " + this.ban + "</br>" +
+            "Est un super utilisateur";
     }
 }
 
