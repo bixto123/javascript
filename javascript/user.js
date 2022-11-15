@@ -53,7 +53,7 @@ let user4 = new SuperUser("Jo", "Bar", 50, true, true, true);
 let user5 = new SuperUser("Tony", "Danza", 71, true, true, false);
 let user6 = new SuperUser("Arnold", "Schwarzenegger", 75, true, false, false);
 
-/* Initialisation des variables local */
+/* Déclare et assign les élements heading et paragraph */
 let heading1 = document.getElementById("heading1");
 let heading2 = document.getElementById("heading2");
 let heading3 = document.getElementById("heading3");
@@ -66,9 +66,9 @@ let paragraph3 = document.getElementById("paragraph3");
 let paragraph4 = document.getElementById("paragraph4");
 let paragraph5 = document.getElementById("paragraph5");
 let paragraph6 = document.getElementById("paragraph6");
-let number = 1;
 
 /* Affiche le contenu de chaque User */
+let number = 1;
 print(heading1, number++);
 user1.print(paragraph1);
 print(heading2, number++);
