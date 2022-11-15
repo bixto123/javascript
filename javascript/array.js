@@ -18,5 +18,5 @@ console.log("Object fruit:");
 console.log(fruit);
 console.log("Contenu de fruit:");
 print(fruit);
-console.log("Contenu de fruit1:");
+console.log("Contenu de list:");
 print(list);
