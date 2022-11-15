@@ -16,7 +16,7 @@ const list = fruit.map(function (element, index) {
 
 console.log("Object fruit:");
 console.log(fruit);
-console.log("Contenu de list:");
-print(list);
+console.log("Contenu de fruit:");
+print(fruit);
 console.log("Contenu de fruit1:");
 print(list);
