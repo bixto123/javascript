@@ -8,7 +8,7 @@ function print(arr) {
 /* Déclare et assign un tableau map avec une list indexé des éléments de arr */
 function map(arr) {
     const map = arr.map(function (element, index) {
-        element = index + ": " + element;
+        element = "Element" + index + ": " + element;
         return element;
     });
     return map;
