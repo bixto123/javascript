@@ -23,8 +23,9 @@ console.log(fruit);
 console.log("Contenu de fruit:");
 print(fruit);
 
-/* Ajout de Orange dans le tableau fruit */
+/* Ajout de Orange dans le tableau fruit puis tri par ordre aphabétique */
 fruit.push("Orange");
+fruit.sort();
 
 /* Déclare et assign l'élement ul */
 let ul = document.getElementById("ul");
