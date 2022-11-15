@@ -5,6 +5,15 @@ function print(arr) {
     });    
 }
 
+/* Déclare et assign un tableau map avec une list indexé des éléments de arr */
+function map(arr) {
+    const map = arr.map(function (element, index) {
+        element = index + ": " + element;
+        return element;
+    });
+    return map;
+}
+
 /* Déclare et assign un tableau fruit */
 const fruit = ["Bannane", "Melon", "Poire", "Pomme"];
 
@@ -14,6 +23,9 @@ console.log(fruit);
 console.log("Contenu de fruit:");
 print(fruit);
 
+/* Ajout de Orange dans le tableau fruit */
+fruit.push("Orange");
+
 /* Déclare et assign l'élement ul */
 let ul = document.getElementById("ul");
 
@@ -22,11 +34,8 @@ ul.style.listStyleType = "none";
 ul.style.padding = 0;
 ul.style.margin = 0;
 
-/* Déclare et assign un tableau list avec une list indexé de ces éléments */
-const list = fruit.map(function (element, index) {
-    element = index + ": " + element;
-    return element;
-});
+/* Déclare et assign un tableau list avec une list indexé des éléments de fruit */
+const list = map(fruit);
 
 /* Affiche le contenu de list dans le document main.html */
 for(let element in list) {
