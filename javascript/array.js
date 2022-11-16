@@ -28,7 +28,7 @@ fruit.push("Orange");
 fruit.sort();
 
 /* Déclare et assign l'élement ul */
-let ul = document.getElementById("ul");
+const ul = document.getElementById("ul");
 
 /* Definition du style css de l'élement ul */
 ul.style.listStyleType = "none";
