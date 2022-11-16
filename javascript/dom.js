@@ -7,10 +7,13 @@ const human = {
     gender: "male"
 }
 
+// Affiche le contenu de l'object littéral human
+console.log(human);
+
 // Obtient un élement par son selecteur comme en css
 const ul1 = document.querySelector("#ul1");
 
-// Création d'un élement <li></li> pour chaque élément de l'object human
+// Création d'un élement <li></li> pour chaque élément de l'object littéral human
 for (const element in human) {
     const li = document.createElement("li");
     li.textContent = element.valueOf() + ": " + human[element.valueOf()];
