@@ -19,3 +19,19 @@ for (const element in human) {
   li.textContent = element.valueOf() + ": " + human[element.valueOf()];
   ul1.appendChild(li);
 }
+
+// Affichage d'un bouton clickable qui affiche bonjour le monde
+let flag = false;
+const button = document.querySelector("#button").parentElement;
+button.onclick = function (e) {
+  const paragraph7 = document.querySelector("#paragraph7");
+  if(!flag) {
+    paragraph7.parentElement.style.color = "red";
+    paragraph7.textContent = "Bonjour le monde";
+  }
+  else {
+    paragraph7.parentElement.style.color = "white";
+    paragraph7.textContent = "";
+  }
+  flag = !flag;
+}
