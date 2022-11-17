@@ -1,54 +1,54 @@
 /* Définition d'une fonction print */
 function print(element, number) {
-    element.innerHTML = "Utilisateur" + number;
+	element.innerHTML = "Utilisateur" + number;
 }
 
 /* Définition d'une class User */
 class User {
-    /* Initialisation des variables local */
-    constructor(firstname, lastname, age) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.age = age;
-    }
-    /* Définition d'une fonction print */
-    print(element) {
-        element.style.color = "green";
-        element.innerHTML =
-            "Prénom: " + this.firstname + "</br>" +
-            "Nom: " + this.lastname + "</br>" +
-            "Age: " + this.age + "</br>" +
-            "Class: utilisateur";
-    }
+	/* Initialisation des variables local */
+	constructor(firstname, lastname, age) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.age = age;
+	}
+	/* Définition d'une fonction print */
+	print(element) {
+		element.style.color = "green";
+		element.innerHTML =
+			"Prénom: " + this.firstname + "</br>" +
+			"Nom: " + this.lastname + "</br>" +
+			"Age: " + this.age + "</br>" +
+			"Class: utilisateur";
+	}
 }
 
 /* Définition d'une class SuperUser héritiere de User */
 class SuperUser extends User {
-    /* Initialisation des variables local */
-    constructor(firstname, lastname, age, ban, remove, change) {
-        super(firstname, lastname, age);
-        this.ban = ban;
-        this.remove = remove;
-        this.change = change;
-    }
-    /* Définition d'une fonction print */
-    print(element) {
-        element.style.color = "red";
-        element.innerHTML =
-            "Prénom: " + this.firstname + "</br>" +
-            "Nom: " + this.lastname + "</br>" +
-            "Age: " + this.age + "</br>" +
-            "Banir: " + this.ban + "</br>" +
-            "Supression: " + this.remove + "</br>" +
-            "Changement: " + this.change + "</br>" +
-            "Class: super utilisateur";
-    }
+	/* Initialisation des variables local */
+	constructor(firstname, lastname, age, ban, remove, change) {
+		super(firstname, lastname, age);
+		this.ban = ban;
+		this.remove = remove;
+		this.change = change;
+	}
+	/* Définition d'une fonction print */
+	print(element) {
+		element.style.color = "red";
+		element.innerHTML =
+			"Prénom: " + this.firstname + "</br>" +
+			"Nom: " + this.lastname + "</br>" +
+			"Age: " + this.age + "</br>" +
+			"Banir: " + this.ban + "</br>" +
+			"Supression: " + this.remove + "</br>" +
+			"Changement: " + this.change + "</br>" +
+			"Class: super utilisateur";
+	}
 }
 
 /* Instanciation des User */
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
-let user3 = new User("Chuck","Norris", 82);
+let user3 = new User("Chuck", "Norris", 82);
 let user4 = new SuperUser("Jo", "Bar", 50, true, true, true);
 let user5 = new SuperUser("Tony", "Danza", 71, true, true, false);
 let user6 = new SuperUser("Arnold", "Schwarzenegger", 75, true, false, false);

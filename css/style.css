@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Création du style du selecteur #ul1 */
 #ul1 {
   list-style-type: none;
   padding: 0px;
