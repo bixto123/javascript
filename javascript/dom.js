@@ -22,8 +22,8 @@ for (const element in human) {
 
 // Affichage d'un bouton clickable qui affiche bonjour le monde
 let flag = false;
-const button = document.querySelector("#button").parentElement;
-button.onclick = function (e) {
+const button1 = document.querySelector("#button1").parentElement;
+button1.onclick = function (e) {
   const paragraph7 = document.querySelector("#paragraph7");
   if(!flag) {
     paragraph7.parentElement.style.color = "red";
@@ -34,4 +34,26 @@ button.onclick = function (e) {
     paragraph7.textContent = "";
   }
   flag = !flag;
+}
+
+// Affichage d'un formulaire input et de son contenu quand le bouton est clické
+const label = document.createElement("label");
+label.setAttribute("for", "name");
+label.textContent = "Nom:";
+const input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("id", "name");
+input.setAttribute("name", "name");
+const button2 = document.createElement("button");
+button2.textContent = "Afficher le contenu du fomulaire";
+const paragraph8 = document.createElement("p");
+paragraph8.textContent = "";
+paragraph8.style.color = "red";
+const section = document.querySelector("#section");
+section.appendChild(label);
+section.appendChild(input);
+section.appendChild(button2);
+section.appendChild(paragraph8);
+button2.onclick = function (e) {
+  paragraph8.textContent = input.value;
 }
