@@ -11,7 +11,7 @@ const human = {
 console.log(human);
 
 //  Obtient un élement par son selecteur comme en css
-const ul1 = document.querySelector("#ul1");
+const ul1 = document.querySelector("#ul1").parentElement;
 
 //  Definit le style css de ul1
 ul1.parentElement.style.listStyleType = "none";
@@ -53,6 +53,9 @@ label.style.marginRight = "1rem";
 const input = document.createElement("input");
 input.setAttribute("type", "text");
 input.setAttribute("id", "name");
+input.setAttribute("minlength", 4);
+input.setAttribute("maxlength", 8);
+input.setAttribute("size", 10);
 input.style.marginRight = "1rem";
 
 //  Création et configuration d'un élément button
