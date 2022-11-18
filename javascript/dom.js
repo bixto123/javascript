@@ -12,6 +12,9 @@ console.log(human);
 
 // Obtient un élement par son selecteur comme en css
 const ul1 = document.querySelector("#ul1");
+ul1.parentElement.style.listStyleType = "none";
+ul1.parentElement.style.padding = "0rem";
+ul1.parentElement.style.margin = "0rem";
 
 // Création d'un élement <li></li> pour chaque élément de l'object littéral human
 for (const element in human) {
@@ -26,7 +29,7 @@ const button1 = document.querySelector("#button1").parentElement;
 button1.onclick = function (e) {
   const paragraph7 = document.querySelector("#paragraph7");
   if(!flag) {
-    paragraph7.parentElement.style.color = "red";
+    paragraph7.parentElement.style.color = "green";
     paragraph7.textContent = "Bonjour le monde";
   }
   else {
@@ -40,15 +43,20 @@ button1.onclick = function (e) {
 const label = document.createElement("label");
 label.setAttribute("for", "name");
 label.textContent = "Nom:";
+label.style.marginRight = "1rem";
+
 const input = document.createElement("input");
 input.setAttribute("type", "text");
 input.setAttribute("id", "name");
-input.setAttribute("name", "name");
+input.style.marginRight = "1rem";
+
 const button2 = document.createElement("button");
 button2.textContent = "Afficher le contenu du fomulaire";
+
 const paragraph8 = document.createElement("p");
 paragraph8.textContent = "";
 paragraph8.style.color = "red";
+
 const section = document.querySelector("#section");
 section.appendChild(label);
 section.appendChild(input);

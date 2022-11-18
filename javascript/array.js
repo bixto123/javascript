@@ -32,8 +32,8 @@ const ul = document.getElementById("ul");
 
 /* Definition du style css de l'élement ul */
 ul.style.listStyleType = "none";
-ul.style.padding = 0;
-ul.style.margin = 0;
+ul.style.padding = "0rem";
+ul.style.margin = "0rem";
 
 /* Déclare et assign un tableau list avec une list indexé des éléments de fruit */
 const list = map(fruit);
