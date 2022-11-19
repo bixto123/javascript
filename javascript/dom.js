@@ -40,9 +40,9 @@ button1.onclick = function (e) {
 
 // Création et assignation d'un élement label */
 const label = document.createElement("label");
+label.style.marginRight = "0.25rem";
 label.setAttribute("for", "name");
 label.textContent = "Nom:";
-label.style.marginRight = "0.25rem";
 
 //  Création et assignation d'un élement input de type text
 const input = document.createElement("input");
@@ -52,12 +52,10 @@ input.setAttribute("minlength", 2);
 input.setAttribute("maxlength", 16);
 input.setAttribute("size", 10);
 
-//	Création et assignation d'un élement br
-const br = document.createElement("br");
-input.style.marginBottom = "0.25rem";
-
 //  Création et assignation d'un élément button
 const button2 = document.createElement("button");
+button2.style.display = "block";
+button2.style.marginTop = "0.25rem";
 button2.textContent = "Afficher le contenu du fomulaire";
 
 //  Création et assignation d'un élement p
@@ -69,7 +67,6 @@ paragraph8.textContent = "";
 const section = document.querySelector("#section");
 section.appendChild(label);
 section.appendChild(input);
-section.appendChild(br);
 section.appendChild(button2);
 section.appendChild(paragraph8);
 button2.onclick = function (e) {
