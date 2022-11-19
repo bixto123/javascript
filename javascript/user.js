@@ -13,7 +13,7 @@ class User {
   }
   //	Définition d'une fonction print
   print(element) {
-    element.style.color = "green";
+    element.setAttribute("class","text-success");
     element.innerHTML =
       "Prénom: " + this.firstname + "</br>" +
       "Nom: " + this.lastname + "</br>" +
@@ -28,18 +28,16 @@ class SuperUser extends User {
   constructor(firstname, lastname, age, ban, remove, change) {
     super(firstname, lastname, age);
     this.ban = ban;
-    this.remove = remove;
     this.change = change;
   }
   //	Définition d'une fonction print
   print(element) {
-    element.style.color = "red";
+    element.setAttribute("class", "text-danger");
     element.innerHTML =
       "Prénom: " + this.firstname + "</br>" +
       "Nom: " + this.lastname + "</br>" +
       "Age: " + this.age + "</br>" +
       "Banir: " + this.ban + "</br>" +
-      "Supression: " + this.remove + "</br>" +
       "Changement: " + this.change + "</br>" +
       "Class: super utilisateur";
   }
@@ -49,9 +47,9 @@ class SuperUser extends User {
 let user1 = new User("Fabrice", "Dame", 44);
 let user2 = new User("Tony", "Stark", 38);
 let user3 = new User("Chuck", "Norris", 82);
-let user4 = new SuperUser("Jo", "Bar", 50, true, true, true);
-let user5 = new SuperUser("Tony", "Danza", 71, true, true, false);
-let user6 = new SuperUser("Arnold", "Schwarzenegger", 75, true, false, false);
+let user4 = new SuperUser("Jo", "Bar", 50, true, true);
+let user5 = new SuperUser("Tony", "Danza", 71, true, false);
+let user6 = new SuperUser("Arnold", "Schwarzenegger", 75, true, false);
 
 //	Déclare et assign les élements heading et paragraph
 let heading1 = document.getElementById("heading1");
