@@ -1,23 +1,23 @@
 //	Affiche le contenu d'un tableau dans la console
 function print(arr) {
-  arr.forEach((element, index) => {
-    console.log(index + ": " + element)
-  });
+	arr.forEach((element, index) => {
+		console.log(index + ": " + element)
+	});
 }
 
-//	Déclare et assign un tableau map avec une list indexé des éléments de arr
+//	Déclare et assign un tableau map avec une list d'élements indexés et fléchés
 function map(arr) {
-  const map = arr.map(function (element, index) {
-    element = "Element" + index + ": " + element;
-    return element;
-  });
-  return map;
+	const map = arr.map(function (element, index) {
+		element = "Element" + index + " -> " + element;
+		return element;
+	});
+	return map;
 }
 
-//	Déclare et assign un tableau fruit */
+//	Déclare et assign un tableau fruit
 const fruit = ["Bannane", "Melon", "Poire", "Pomme"];
 
-//	Affiche le contenu des tableaux dans la console
+//	Affiche le tableau fruit et son contenu des dans la console
 console.log("Tableau fruit:");
 console.log(fruit);
 console.log("Contenu de fruit:");
@@ -27,20 +27,16 @@ print(fruit);
 fruit.push("Orange");
 fruit.sort();
 
-//	Déclare et assign l'élement ul
-const ul = document.getElementById("ul");
+//	Déclare et assign l'élement ul1
+const ul1 = document.getElementById("ul1");
 
-//	Definition du style css de l'élement ul
-ul.style.listStyleType = "none";
-ul.style.padding = "0rem";
-ul.style.margin = "0rem";
-
-//	Déclare et assign un tableau list avec une list indexé des éléments de fruit
+//	Déclare et assign un tableau list avec une list des éléments de fruit
 const list = map(fruit);
 
 //	Affiche le contenu de list dans le document main.html
 for (const element in list) {
-  const li = document.createElement("li");
-  li.textContent = list[element];
-  ul.appendChild(li);
+	const li = document.createElement("li");
+	li.setAttribute("class", "list-group-item");
+	li.textContent = list[element];
+	ul1.appendChild(li);
 }

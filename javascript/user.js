@@ -1,46 +1,46 @@
 //	Définition d'une fonction print
 function print(element, number) {
-  element.innerHTML = "Utilisateur" + number;
+	element.innerHTML = "Utilisateur" + number;
 }
 
 //	Définition d'une class User
 class User {
-  //	Initialisation des variables local
-  constructor(firstname, lastname, age) {
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.age = age;
-  }
-  //	Définition d'une fonction print
-  print(element) {
-    element.setAttribute("class","text-success");
-    element.innerHTML =
-      "Prénom: " + this.firstname + "</br>" +
-      "Nom: " + this.lastname + "</br>" +
-      "Age: " + this.age + "</br>" +
-      "Class: utilisateur";
-  }
+	//	Initialisation des variables local
+	constructor(firstname, lastname, age) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.age = age;
+	}
+	//	Définition d'une fonction print
+	print(element) {
+		element.setAttribute("class","text-success");
+		element.innerHTML =
+			"Prénom: " + this.firstname + "</br>" +
+			"Nom: " + this.lastname + "</br>" +
+			"Age: " + this.age + "</br>" +
+			"Class: utilisateur";
+	}
 }
 
 //	Définition d'une class SuperUser héritiere de User
 class SuperUser extends User {
-  //	Initialisation des variables local
-  constructor(firstname, lastname, age, ban, remove, change) {
-    super(firstname, lastname, age);
-    this.ban = ban;
-    this.change = change;
-  }
-  //	Définition d'une fonction print
-  print(element) {
-    element.setAttribute("class", "text-danger");
-    element.innerHTML =
-      "Prénom: " + this.firstname + "</br>" +
-      "Nom: " + this.lastname + "</br>" +
-      "Age: " + this.age + "</br>" +
-      "Banir: " + this.ban + "</br>" +
-      "Changement: " + this.change + "</br>" +
-      "Class: super utilisateur";
-  }
+	//	Initialisation des variables local
+	constructor(firstname, lastname, age, ban, remove, change) {
+		super(firstname, lastname, age);
+		this.ban = ban;
+		this.change = change;
+	}
+	//	Définition d'une fonction print
+	print(element) {
+		element.setAttribute("class", "text-danger");
+		element.innerHTML =
+			"Prénom: " + this.firstname + "</br>" +
+			"Nom: " + this.lastname + "</br>" +
+			"Age: " + this.age + "</br>" +
+			"Banir: " + this.ban + "</br>" +
+			"Changement: " + this.change + "</br>" +
+			"Class: super utilisateur";
+	}
 }
 
 //	Instanciation des user
