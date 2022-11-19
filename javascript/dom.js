@@ -27,11 +27,10 @@ const button1 = document.querySelector("#button1");
 button1.onclick = function (e) {
 	const paragraph7 = document.querySelector("#paragraph7");
 	if(!flag) {
-		paragraph7.style.color = "green";
+		paragraph7.setAttribute("class", "text-danger");
 		paragraph7.textContent = "Bonjour le monde";
 	}
 	else {
-		paragraph7.style.color = "white";
 		paragraph7.textContent = "";
 	}
 	flag = !flag;
@@ -39,34 +38,38 @@ button1.onclick = function (e) {
 
 // Affichage d'un formulaire input et de son contenu quand le bouton est clické
 
-// Création et configuration d'un élément label */
+// Création et assignation d'un élement label */
 const label = document.createElement("label");
 label.setAttribute("for", "name");
 label.textContent = "Nom:";
-label.style.marginRight = "1rem";
+label.style.marginRight = "0.25rem";
 
-//  Création et configuration d'un élément input de type text
+//  Création et assignation d'un élement input de type text
 const input = document.createElement("input");
 input.setAttribute("type", "text");
 input.setAttribute("id", "name");
-input.setAttribute("minlength", 4);
-input.setAttribute("maxlength", 8);
+input.setAttribute("minlength", 2);
+input.setAttribute("maxlength", 16);
 input.setAttribute("size", 10);
-input.style.marginRight = "1rem";
 
-//  Création et configuration d'un élément button
+//	Création et assignation d'un élement br
+const br = document.createElement("br");
+input.style.marginBottom = "0.25rem";
+
+//  Création et assignation d'un élément button
 const button2 = document.createElement("button");
 button2.textContent = "Afficher le contenu du fomulaire";
 
-//  Création et configuration d'un élément p
+//  Création et assignation d'un élement p
 const paragraph8 = document.createElement("p");
+paragraph8.setAttribute("class", "text-success");
 paragraph8.textContent = "";
-paragraph8.style.color = "red";
 
 //  Requière l'élement .section et lui ajoute les éléments label, input, button2 et paragraph8
 const section = document.querySelector("#section");
 section.appendChild(label);
 section.appendChild(input);
+section.appendChild(br);
 section.appendChild(button2);
 section.appendChild(paragraph8);
 button2.onclick = function (e) {

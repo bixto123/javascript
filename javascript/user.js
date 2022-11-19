@@ -13,7 +13,7 @@ class User {
 	}
 	//	Définition d'une fonction print
 	print(element) {
-		element.setAttribute("class","text-success");
+		element.setAttribute("class", "text-success");
 		element.innerHTML =
 			"Prénom: " + this.firstname + "</br>" +
 			"Nom: " + this.lastname + "</br>" +
