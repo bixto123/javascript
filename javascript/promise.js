@@ -1,3 +1,36 @@
+// Part I
+
+// fonction avec deux callbacks attacher.
+function dothat(successCallback, failureCallback){
+  console.log("C'est fait");
+  // réussir une fois sur deux
+  if (Math.random() > .5) {
+    successCallback("Reussite");
+  } else {
+    failureCallback("Echec");
+  }
+}
+
+function successCallback(result) {
+  console.log("L'opération a réussi avec le message : " + result);
+}
+
+function failureCallback(result) {
+  console.error("L'opération a échoué avec le message : " + result);
+}
+
+// Chainage de fonctions asynchrones
+dothat(function() {
+  dothat(function() {
+    dothat(successCallback, failureCallback);
+    return successCallback;
+  }, failureCallback);
+  return successCallback;
+}, failureCallback);
+/*
+// Part II
+
+// Fonction qui renvoie une promesse avec deux callbacks attacher.
 function dothat(){
   return new Promise((successCallback, failureCallback) => {
     console.log("C'est fait");
@@ -5,7 +38,7 @@ function dothat(){
     if (Math.random() > .5) {
       successCallback("Reussite");
     } else {
-      failureCallback("Echec")
+      failureCallback("Echec");
     }
   })
 }
@@ -14,11 +47,25 @@ function successCallback(result) {
   console.log("L'opération a réussi avec le message : " + result);
 }
 
-function failureCallback(erreur) {
-  console.log("L'opération a échoué avec le message : " + erreur);
+function failureCallback(error) {
+  console.error("L'opération a échoué avec le message : " + error);
 }
 
+// Assignation et de l'object promise par reference à la constante promise
 const promise = dothat();
-const promise1 = promise.then(successCallback, failureCallback);
-const promise2 = promise.then(successCallback, failureCallback);
-const promise3 = promise.then(successCallback, failureCallback);
+
+// Chainage de fonctions asynchrones
+promise
+.then(function (result) {
+  console.log("L'opération numéro 1 réussi avec le message : " + result);
+  return dothat(result);
+})
+.then(function (result) {
+  console.log("L'opération numéro 2 réussi avec le message : " + result);
+  return dothat(result);
+})
+.then(function (result) {
+  console.log("L'opération numéro 3 réussi avec le message : " + result);
+})
+.catch(failureCallback);
+*/
