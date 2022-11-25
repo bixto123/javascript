@@ -1,3 +1,4 @@
+/*
 // Part I
 
 // fonction avec deux callbacks attacher.
@@ -20,14 +21,14 @@ function failureCallback(result) {
 }
 
 // Chainage de fonctions asynchrones
-dothat(function() {
-  dothat(function() {
+dothat(function () {
+  dothat(function () {
     dothat(successCallback, failureCallback);
     return successCallback;
   }, failureCallback);
   return successCallback;
 }, failureCallback);
-/*
+*/
 // Part II
 
 // Fonction qui renvoie une promesse avec deux callbacks attacher.
@@ -57,15 +58,14 @@ const promise = dothat();
 // Chainage de fonctions asynchrones
 promise
 .then(function (result) {
-  console.log("L'opération numéro 1 réussi avec le message : " + result);
-  return dothat(result);
+  console.log("L'opération numéro 1 a réussi avec le message : " + result);
+  return dothat();
 })
 .then(function (result) {
-  console.log("L'opération numéro 2 réussi avec le message : " + result);
-  return dothat(result);
+  console.log("L'opération numéro 2 a réussi avec le message : " + result);
+  return dothat();
 })
 .then(function (result) {
-  console.log("L'opération numéro 3 réussi avec le message : " + result);
+  console.log("L'opération numéro 3 a réussi avec le message : " + result);
 })
 .catch(failureCallback);
-*/
