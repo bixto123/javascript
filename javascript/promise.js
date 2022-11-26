@@ -16,8 +16,8 @@ function successCallback(result) {
   console.log("L'opération a réussi avec le message : " + result);
 }
 
-function failureCallback(result) {
-  console.error("L'opération a échoué avec le message : " + result);
+function failureCallback(error) {
+  console.error("L'opération a échoué avec le message : " + error);
 }
 
 // Chainage de fonctions asynchrones
@@ -55,6 +55,7 @@ function failureCallback(error) {
 // Assignation et de l'object promise par reference à la constante promise
 const promise = dothat();
 
+/*
 // Chainage de fonctions asynchrones
 promise
 .then(function (result) {
@@ -66,6 +67,22 @@ promise
   return dothat();
 })
 .then(function (result) {
+  console.log("L'opération numéro 3 a réussi avec le message : " + result);
+})
+.catch(failureCallback);
+*/
+
+// Chainage de fonctions asynchrones
+promise
+.then(result => {
+  console.log("L'opération numéro 1 a réussi avec le message : " + result);
+  return dothat();
+})
+.then(result => {
+  console.log("L'opération numéro 2 a réussi avec le message : " + result);
+  return dothat();
+})
+.then(result => {
   console.log("L'opération numéro 3 a réussi avec le message : " + result);
 })
 .catch(failureCallback);
