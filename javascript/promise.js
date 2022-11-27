@@ -88,6 +88,7 @@ promise
 .catch(failureCallback);
 */
 
+/*
 // Part III
 new Promise((resolve, reject) => {
     console.log('Initial');
@@ -105,3 +106,35 @@ new Promise((resolve, reject) => {
 .then(() => {
     console.log('Do this whatever happened before');
 });
+*/
+
+// Part IV
+
+function dothat(){
+  return new Promise((successCallback, failureCallback) => {
+    console.log("C'est fait");
+    // réussir une fois sur deux
+    if (Math.random() > .5) {
+      successCallback("Reussite");
+    } else {
+      failureCallback("Echec");
+    }
+  })
+}
+
+function successCallback(result) {
+  console.log("L'opération a réussi avec le message : " + result);
+}
+
+function failureCallback(error) {
+  throw new Error("L'opération a échoué avec le message : " + error);
+}
+
+try {
+  const result = dothat();
+  const newResult = dothat(result);
+  const finalResult = dothat(newResult);
+  console.log('Résultat final : ' + finalResult);
+} catch(error) {
+  console.error(error);
+}
