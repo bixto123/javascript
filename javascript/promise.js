@@ -136,11 +136,11 @@ try {
   const result = dothat();
   console.log('Résultat : ' + result);
   const newResult = dothat(result);
-  console.log('Résultat new : ' + newResult);
+  console.log('Résultat : ' + newResult);
   const finalResult = dothat(newResult);
-  console.log('Résultat final : ' + finalResult);
+  console.log('Résultat : ' + finalResult);
 } catch(error) {
-  console.error(error);
+  console.error('Résultat : ' + error);
 }
 */
 
@@ -150,11 +150,11 @@ async function toto() {
     const result = await dothat();
     console.log('Résultat : ' + result);
     const newResult = await dothat(result);
-    console.log('Résultat new : ' + newResult);
+    console.log('Résultat : ' + newResult);
     const finalResult = await dothat(newResult);
-    console.log('Résultat final : ' + finalResult);
+    console.log('Résultat : ' + finalResult);
   } catch(error) {
-    failureCallback(error);
+    console.error('Résultat : ' + error);
   }
 }
 
