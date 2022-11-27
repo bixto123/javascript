@@ -62,7 +62,7 @@ window.onunhandledrejection = (event) => {
 */
 
 window.addEventListener("unhandledrejection", event => {
-  console.error(event.promise + " : " + event.reason);
+  console.error(event.promise + " rejected reason " + event.reason);
 }, false);
 
 // Assignation et de l'object promise par reference à la constante promise
