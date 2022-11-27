@@ -130,6 +130,7 @@ function failureCallback(error) {
   throw new Error("L'opération a échoué avec le message : " + error);
 }
 
+/*
 try {
   const result = dothat();
   const newResult = dothat(result);
@@ -138,3 +139,17 @@ try {
 } catch(error) {
   console.error(error);
 }
+*/
+
+async function toto() {
+  try {
+    const result = await dothat();
+    const newResult = await dothat(result);
+    const finalResult = await dothat(newResult);
+    console.log('Résultat final : ' + finalResult);
+  } catch(error) {
+    failureCallback(error);
+  }
+}
+
+toto();
