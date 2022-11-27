@@ -131,6 +131,7 @@ function failureCallback(error) {
 }
 
 /*
+// Chainage de fonctions synchrones
 try {
   const result = dothat();
   const newResult = dothat(result);
@@ -141,6 +142,7 @@ try {
 }
 */
 
+// Chainage de fonctions asynchrones
 async function toto() {
   try {
     const result = await dothat();
