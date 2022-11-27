@@ -30,6 +30,7 @@ dothat(function () {
 }, failureCallback);
 */
 
+/*
 // Part II
 
 // Fonction qui renvoie une promesse avec deux callbacks attacher.
@@ -61,8 +62,9 @@ window.onunhandledrejection = (event) => {
 }
 */
 
+/*
 window.addEventListener("unhandledrejection", event => {
-  console.error(event.promise + " rejected reason " + event.reason);
+  console.error(event.promise + " unhandled rejection " + event.reason);
 }, false);
 
 // Assignation et de l'object promise par reference à la constante promise
@@ -85,6 +87,7 @@ promise
 .catch(failureCallback);
 */
 
+/*
 // Chainage de fonctions asynchrones
 promise
 .then(result => {
@@ -99,6 +102,7 @@ promise
   console.log("L'opération numéro 3 a réussi avec le message : " + result);
 })
 .catch(failureCallback);
+*/
 
 /*
 // Part III
@@ -173,3 +177,17 @@ async function async_chain() {
 
 async_chain();
 */
+
+// Part V
+
+function saySomething(message) {
+  console.log(message + " elapsed.");
+}
+
+function failureCallback(error) {
+  console.error("L'opération a échoué avec le message : " + error);
+}
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+wait(10 * 1000).then(() => saySomething("10 seconds")).catch(failureCallback);
