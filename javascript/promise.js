@@ -133,29 +133,29 @@ function failureCallback(error) {
 /*
 // Chainage de fonctions synchrones
 try {
-  const result = dothat();
-  console.log('Résultat : ' + result);
-  const newResult = dothat(result);
-  console.log('Résultat : ' + newResult);
-  const finalResult = dothat(newResult);
-  console.log('Résultat : ' + finalResult);
+  const result1 = dothat();
+  console.log("L'opération a réussi avec le message : " + result1);
+  const result2 = dothat(result1);
+  console.log("L'opération a réussi avec le message : " + result2);
+  const result3 = dothat(result2);
+  console.log("L'opération a réussi avec le message : " + result3);
 } catch(error) {
-  console.error('Résultat : ' + error);
+  console.error("L'opération a échoué avec le message : " + error);
 }
 */
 
 // Chainage de fonctions asynchrones
-async function toto() {
+async function async_chain() {
   try {
-    const result = await dothat();
-    console.log('Résultat : ' + result);
-    const newResult = await dothat(result);
-    console.log('Résultat : ' + newResult);
-    const finalResult = await dothat(newResult);
-    console.log('Résultat : ' + finalResult);
+    const result1 = await dothat();
+    console.log("L'opération a réussi avec le message : " + result1);
+    const result2 = await dothat(result1);
+    console.log("L'opération a réussi avec le message : " + result2);
+    const result3 = await dothat(result2);
+    console.log("L'opération a réussi avec le message : " + result3);
   } catch(error) {
-    console.error('Résultat : ' + error);
+    console.error("L'opération a échoué avec le message : " + error);
   }
 }
 
-toto();
+async_chain();
