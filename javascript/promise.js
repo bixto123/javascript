@@ -134,7 +134,9 @@ function failureCallback(error) {
 // Chainage de fonctions synchrones
 try {
   const result = dothat();
+  console.log('Résultat : ' + result);
   const newResult = dothat(result);
+  console.log('Résultat new : ' + newResult);
   const finalResult = dothat(newResult);
   console.log('Résultat final : ' + finalResult);
 } catch(error) {
@@ -146,7 +148,9 @@ try {
 async function toto() {
   try {
     const result = await dothat();
+    console.log('Résultat : ' + result);
     const newResult = await dothat(result);
+    console.log('Résultat new : ' + newResult);
     const finalResult = await dothat(newResult);
     console.log('Résultat final : ' + finalResult);
   } catch(error) {
