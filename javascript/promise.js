@@ -30,13 +30,12 @@ dothat(function () {
 }, failureCallback);
 */
 
-/*
 // Part II
 
 // Fonction qui renvoie une promesse avec deux callbacks attacher.
 function dothat(){
   return new Promise((successCallback, failureCallback) => {
-    console.log("C'est fait");
+    //console.log("C'est fait");
     // réussir une fois sur deux
     if (Math.random() > .5) {
       successCallback("Reussite");
@@ -50,13 +49,20 @@ function successCallback(result) {
   console.log("L'opération a réussi avec le message : " + result);
 }
 
+/*
 function failureCallback(error) {
   console.error("L'opération a échoué avec le message : " + error);
+}
+*/
+
+window.onunhandledrejection = (event) => {
+  console.error(event.promise + " : " + event.reason);
 }
 
 // Assignation et de l'object promise par reference à la constante promise
 const promise = dothat();
 
+/*
 // Chainage de fonctions asynchrones
 promise
 .then(function (result) {
@@ -71,6 +77,7 @@ promise
   console.log("L'opération numéro 3 a réussi avec le message : " + result);
 })
 .catch(failureCallback);
+*/
 
 // Chainage de fonctions asynchrones
 promise
@@ -86,7 +93,6 @@ promise
   console.log("L'opération numéro 3 a réussi avec le message : " + result);
 })
 .catch(failureCallback);
-*/
 
 /*
 // Part III
@@ -108,6 +114,7 @@ new Promise((resolve, reject) => {
 });
 */
 
+/*
 // Part IV
 
 function dothat(){
@@ -144,7 +151,7 @@ try {
 }
 */
 
-// Chainage de fonctions asynchrones
+/* Chainage de fonctions asynchrones
 async function async_chain() {
   try {
     const result1 = await dothat();
@@ -159,3 +166,4 @@ async function async_chain() {
 }
 
 async_chain();
+*/
