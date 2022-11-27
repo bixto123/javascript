@@ -55,9 +55,15 @@ function failureCallback(error) {
 }
 */
 
+/*
 window.onunhandledrejection = (event) => {
   console.error(event.promise + " : " + event.reason);
 }
+*/
+
+window.addEventListener("unhandledrejection", event => {
+  console.error(event.promise + " : " + event.reason);
+}, false);
 
 // Assignation et de l'object promise par reference à la constante promise
 const promise = dothat();
