@@ -1,5 +1,5 @@
 const image = document.querySelector(`img`);
-const request1 = new Request(`../images/nahida_draw.png`);
+const request1 = new Request(`/javascript/images/nahida_draw.png`);
 
 if (window.fetch) {
   fetch(request1)
@@ -21,7 +21,7 @@ else {
   console.error(`L'api fetch n'est pas implémenter pour cette version de votre client web`);
 }
 
-const request2 = new Request(`../json/superhero.json`);
+const request2 = new Request(`/javascript/json/superhero.json`);
 
 if (window.fetch) {
 	fetch(request2)
