@@ -27,7 +27,7 @@ if (window.fetch) {
 	fetch(request2)
 	.then(response => {
 		if(response.ok)
-			return response.json()
+			return response.json();
 		else
 			console.error(`Mauvaise réponse du réseau`);
 	})
